@@ -12,7 +12,7 @@ namespace CaseVotaRestaurante.Application.DTOs
     {
         [Key]
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "O nome é necessário")]
         [StringLength(70)]
         [DisplayName("Name")]
         public string Name { get; set; }
