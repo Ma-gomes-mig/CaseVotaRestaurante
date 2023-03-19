@@ -14,7 +14,8 @@ namespace CaseVotaRestaurante.Infra.Data.Context
 
         public DbSet<People> Peoples { get; set; }
         public DbSet<Restaurant> Restaurants { get; set; }
-        
+        public DbSet<Vote> Votes { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

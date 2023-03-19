@@ -4,6 +4,7 @@ using CaseVotaRestaurante.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CaseVotaRestaurante.Infra.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230319020503_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -40,33 +43,6 @@ namespace CaseVotaRestaurante.Infra.Data.Migrations
                     SqlServerKeyBuilderExtensions.IsClustered(b.HasKey("Id"));
 
                     b.ToTable("Peoples");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Pessoa1"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Pessoa2"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Pessoa3"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Pessoa4"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "Pessoa5"
-                        });
                 });
 
             modelBuilder.Entity("CaseVotaRestaurante.Domain.Entities.Restaurant", b =>
@@ -115,8 +91,18 @@ namespace CaseVotaRestaurante.Infra.Data.Migrations
                     b.Property<int>("PeopleId")
                         .HasColumnType("int");
 
+                    b.Property<string>("PeopleName")
+                        .IsRequired()
+                        .HasMaxLength(70)
+                        .HasColumnType("nvarchar(70)");
+
                     b.Property<int>("RestaurantId")
                         .HasColumnType("int");
+
+                    b.Property<string>("RestaurantName")
+                        .IsRequired()
+                        .HasMaxLength(70)
+                        .HasColumnType("nvarchar(70)");
 
                     b.Property<DateTime>("VoteDate")
                         .HasColumnType("datetime2");

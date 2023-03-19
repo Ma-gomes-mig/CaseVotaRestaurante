@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseVotaRestaurante.Domain", "CaseVotaRestaurante.Domain\CaseVotaRestaurante.Domain.csproj", "{6ADC9CC8-5297-4A4A-BE04-58D397A6FEAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaseVotaRestaurante.Domain", "CaseVotaRestaurante.Domain\CaseVotaRestaurante.Domain.csproj", "{6ADC9CC8-5297-4A4A-BE04-58D397A6FEAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseVotaRestaurante.Infra.Data", "CaseVotaRestaurante.Infra.Data\CaseVotaRestaurante.Infra.Data.csproj", "{C563A0F0-AB97-416D-B566-804725A108D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaseVotaRestaurante.Infra.Data", "CaseVotaRestaurante.Infra.Data\CaseVotaRestaurante.Infra.Data.csproj", "{C563A0F0-AB97-416D-B566-804725A108D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseVotaRestaurante.Infra.IoC", "CaseVotaRestaurante.Infra.IoC\CaseVotaRestaurante.Infra.IoC.csproj", "{3E938D81-870C-4F18-A5D9-90AC8564C0C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaseVotaRestaurante.Infra.IoC", "CaseVotaRestaurante.Infra.IoC\CaseVotaRestaurante.Infra.IoC.csproj", "{3E938D81-870C-4F18-A5D9-90AC8564C0C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseVotaRestaurante.Application", "CaseVotaRestaurante.Application\CaseVotaRestaurante.Application.csproj", "{2768C47C-561A-458D-A9A8-1C9D1EC72CBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaseVotaRestaurante.Application", "CaseVotaRestaurante.Application\CaseVotaRestaurante.Application.csproj", "{2768C47C-561A-458D-A9A8-1C9D1EC72CBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseVotaRestaurante.DomainTest", "CaseVotaRestaurante.DomainTest\CaseVotaRestaurante.DomainTest.csproj", "{41EF2550-A1E9-4F23-8F05-D451A59699C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaseVotaRestaurante.DomainTest", "CaseVotaRestaurante.DomainTest\CaseVotaRestaurante.DomainTest.csproj", "{41EF2550-A1E9-4F23-8F05-D451A59699C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseVotaRestaurante.WebUI", "CaseVotaRestaurante.WebUI\CaseVotaRestaurante.WebUI.csproj", "{6D27D36E-221E-4FFE-BF79-4B42AE430A91}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseVotaRestaurante.WebApi", "CaseVotaRestaurante.WebApi\CaseVotaRestaurante.WebApi.csproj", "{104D7FBC-17E2-45A1-A6AF-3ACE2B0B91AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseVotaRestaurante.WebUI", "CaseVotaRestaurante.WebUI\CaseVotaRestaurante.WebUI.csproj", "{7346A484-2217-4818-A671-6E8F5D0E9A52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +43,14 @@ Global
 		{41EF2550-A1E9-4F23-8F05-D451A59699C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41EF2550-A1E9-4F23-8F05-D451A59699C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41EF2550-A1E9-4F23-8F05-D451A59699C9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6D27D36E-221E-4FFE-BF79-4B42AE430A91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6D27D36E-221E-4FFE-BF79-4B42AE430A91}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6D27D36E-221E-4FFE-BF79-4B42AE430A91}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6D27D36E-221E-4FFE-BF79-4B42AE430A91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{104D7FBC-17E2-45A1-A6AF-3ACE2B0B91AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{104D7FBC-17E2-45A1-A6AF-3ACE2B0B91AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{104D7FBC-17E2-45A1-A6AF-3ACE2B0B91AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{104D7FBC-17E2-45A1-A6AF-3ACE2B0B91AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7346A484-2217-4818-A671-6E8F5D0E9A52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7346A484-2217-4818-A671-6E8F5D0E9A52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7346A484-2217-4818-A671-6E8F5D0E9A52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7346A484-2217-4818-A671-6E8F5D0E9A52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -13,6 +13,7 @@ namespace CaseVotaRestaurante.Domain.Interface
         Task<Restaurant> GetRestaurantByIdAsync(int? id);
 
 
+
         Task<Restaurant> CreateAsync(Restaurant restaurant);
         Task<Restaurant> UpdateAsync(Restaurant restaurant);
         Task<Restaurant> DeleteAsync(Restaurant restaurant);

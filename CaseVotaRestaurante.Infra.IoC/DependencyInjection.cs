@@ -1,6 +1,10 @@
-﻿using CaseVotaRestaurante.Domain.Interface;
+﻿using CaseVotaRestaurante.Application.Interfaces;
+using CaseVotaRestaurante.Application.Mappings;
+using CaseVotaRestaurante.Application.Services;
+using CaseVotaRestaurante.Domain.Interface;
 using CaseVotaRestaurante.Infra.Data.Context;
 using CaseVotaRestaurante.Infra.Data.Repository;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -24,6 +28,11 @@ namespace CaseVotaRestaurante.Infra.IoC
 
             services.AddScoped<IRestaurantRepository, RestaurantRepository>();
             services.AddScoped<IPeopleRepository, PeopleRepository>();
+            services.AddScoped<IVoteRepository, VoteRespository>();
+            services.AddScoped<IRestaurantService, RestaurantService>();
+            services.AddScoped<IPeopleService, PeopleService>();
+            services.AddScoped<IVoteService, VoteService>();
+            services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
 
             return services;
         }

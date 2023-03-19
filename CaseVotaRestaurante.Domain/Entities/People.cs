@@ -27,8 +27,8 @@ namespace CaseVotaRestaurante.Domain.Entities
             ValidateName(name);
         }
 
-        public int RestaurantId { get; set; }
-        public Restaurant Restaurant { get; set; }
+        public ICollection<Vote> Votes { get; set; }
+        
 
         private void ValidateName(String name)
         {

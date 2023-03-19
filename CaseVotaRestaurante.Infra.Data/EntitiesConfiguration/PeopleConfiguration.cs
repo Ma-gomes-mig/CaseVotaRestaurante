@@ -16,12 +16,14 @@ namespace CaseVotaRestaurante.Infra.Data.EntitiesConfiguration
             builder.HasKey(k => k.Id).IsClustered();
             builder.Property(p => p.Name).HasMaxLength(70).IsRequired();
 
-            //builder.HasData(
-            //    new People(1, "Pessoa1"),
-            //    new People(2, "Pessoa2"),
-            //    new People(3, "Pessoa3"),
-            //    new People(4, "Pessoa4"),
-            //    new People(5, "Pessoa5"));
+
+
+            builder.HasData(
+                new People(1, "Pessoa1"),
+                new People(2, "Pessoa2"),
+                new People(3, "Pessoa3"),
+                new People(4, "Pessoa4"),
+                new People(5, "Pessoa5"));
         }
     }
 }

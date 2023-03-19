@@ -1,0 +1,46 @@
+﻿@model CaseVotaRestaurante.Application.DTOs.VoteDTO
+@{
+    ViewData["Title"] = "Register new Vote";
+}
+
+<h2>@ViewData["Title"]</h2>
+<form asp-action="Create" method="post">
+    <div class="form-horizontal">
+        <hr />
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <div class="form-group">
+            <label asp-for="RestaurantId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                @*<input asp-for="RestaurantName" class="form-control" />*@
+                @*@Html.DropDownListFor(model => model.RestaurantId, ViewBag.Restaurant as SelectList, new { @class = "form-control" })*@
+                <select asp-for="RestaurantId" class="form-control" asp-items="ViewBag.RestaurantId"></select>
+                <span asp-validation-for="RestaurantId" class="text-danger"></span>
+            </div>        
+        </div>
+        <div class="form-group">
+            <label asp-for="VoteDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="VoteDate" class="form-control" />
+                <span asp-validation-for="VoteDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PeopleId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                @*<input asp-for="PeopleName" class="form-control" />*@
+                @*@Html.DropDownListFor(model => model.PeopleId, ViewBag.People as SelectList, new { @class = "form-control" })*@
+                <select asp-for="PeopleId" class="form-control" asp-items="ViewBag.PeopleId"></select>
+                <span asp-validation-for="PeopleId" class="text-danger"></span>
+            </div>
+        </div>
+        <br/>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-sucess" />
+                <a asp-action="Index" class="btn btn-info">Back to list </a>
+            </div>
+        </div>
+    </div>
+
+</form>
