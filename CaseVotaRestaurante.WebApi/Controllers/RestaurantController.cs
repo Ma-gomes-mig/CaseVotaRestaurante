@@ -25,5 +25,16 @@ namespace CaseVotaRestaurante.WebApi.Controllers
             }
             return Ok(restaurant);
         }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<RestaurantDTO>> Get(int id)
+        {
+            var restaurant = await _restaurantService.GetRestaurantByIdAsync(id);
+            if(restaurant == null)
+            {
+                return NotFound("Restaurant not found");
+            }
+            return Ok(restaurant);
+        }
     }
 }
