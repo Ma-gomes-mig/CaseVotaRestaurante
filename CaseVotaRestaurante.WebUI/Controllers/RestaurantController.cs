@@ -56,5 +56,7 @@ namespace CaseVotaRestaurante.WebUI.Controllers
             await _restaurantService.DeleteAsync(id);
             return RedirectToAction("Index");
         }
+
+
     }
 }

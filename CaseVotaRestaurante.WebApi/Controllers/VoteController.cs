@@ -25,6 +25,18 @@ namespace CaseVotaRestaurante.WebApi.Controllers
                 return NotFound("Restaurant not found");
             }
             return Ok(vote);
+        }        
+
+        [HttpPost]
+        public async Task<IActionResult> Post([FromBody] VoteDTO voteDto)
+        {
+            if (voteDto == null)
+                return BadRequest("Invalid Data");
+
+
+            await _voteService.CreateVoteAsync(voteDto);
+
+            return new CreatedAtRouteResult("GetRestaurant", new { id = voteDto.Id }, voteDto);
         }
     }
-}
+}   
