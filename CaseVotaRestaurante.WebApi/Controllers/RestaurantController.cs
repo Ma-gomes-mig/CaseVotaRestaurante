@@ -26,7 +26,7 @@ namespace CaseVotaRestaurante.WebApi.Controllers
             return Ok(restaurant);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "GetRestaurant")]
         public async Task<ActionResult<RestaurantDTO>> Get(int id)
         {
             var restaurant = await _restaurantService.GetRestaurantByIdAsync(id);
@@ -35,6 +35,18 @@ namespace CaseVotaRestaurante.WebApi.Controllers
                 return NotFound("Restaurant not found");
             }
             return Ok(restaurant);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Post([FromBody] RestaurantDTO restaurantDto)
+        {
+            if (restaurantDto == null)
+                return BadRequest("Invalid Data");
+
+            
+            await _restaurantService.CreateAsync(restaurantDto);
+
+            return new CreatedAtRouteResult("GetRestaurant", new { id = restaurantDto.Id }, restaurantDto);
         }
     }
 }
