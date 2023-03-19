@@ -44,6 +44,12 @@ namespace CaseVotaRestaurante.WebUI.Controllers
             return View();
         }
 
+        //[HttpGet]
+        //public async Task<IActionResult> Vencedor()
+        //{
+        //    var vencedor = await _voteService.GetAllVoteAsync().
+        //}
+
         [HttpGet]
         public async Task<IActionResult> Delete(int? id)
         {
